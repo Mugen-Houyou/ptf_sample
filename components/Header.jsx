@@ -27,8 +27,14 @@ const Header = () => {
         header
           ? "py-4 bg-white shadow-lg dark:bg-accent"
           : "py-6 dark:bg-transparent"
-      } sticky top-0 z-30 transition-all ${pathname==='/'&&'bg-#fef9f5'}`}
-    >
+      } sticky top-0 z-30 transition-all ${pathname==='/'&&'bg-#fef9f5'}`} >
+      {/* pathname 조건부 클래스 설명:
+
+        ${pathname==='/'&&'bg-#fef9f5'} 부분은,
+        pathname 변수의 값이 '/'일 경우에만 bg-#fef9f5 클래스를 적용한다는 것.
+
+        JavaScript의 논리 연산자 &&는 왼쪽 표현식이 true일 때만 오른쪽 표현식을 평가함.
+        고로, 여기서는 pathname이 '/'인 경우에만 bg-#fef9f5가 적용됨. */}
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Logo />
